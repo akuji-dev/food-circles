@@ -1,0 +1,393 @@
+/*
+  * @package Food Circles
+  * Main StyleSheet
+*/
+
+/* Default CSS */
+:root {
+  --primary-color: #ff0013;
+  --secondary-color: #fabf1c;
+  --white-color: #fff;
+  --black-color: #000;
+
+  --secondary-rgb: 250 191 28;
+
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+    padding: 0;
+  }
+}
+/* Default CSS */
+
+/* Custom CSS Class */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-black {
+  color: var(--black-color) !important;
+}
+/* !Custom CSS Class */
+
+/* Body */
+body.hamburger-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+/* !Body */
+
+/* Navigation */
+#navigation {
+  width: 100%;
+  min-height: 70px;
+  position: fixed;
+  top: 0;
+  background-color: var(--primary-color);
+  padding: 0;
+  box-shadow: 0 0 30px -1px #000000a3;
+  z-index: 10;
+}
+
+.navbar-brand {
+  width: 100%;
+  max-width: 150px;
+  position: absolute;
+  top: 0.2rem;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #nav-menu {
+    display: none;
+  }
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:after {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  background: #d09902;
+  border-radius: 0.5rem;
+  display: block;
+  content: "";
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.nav-item:hover:after {
+  opacity: 1;
+}
+
+.nav-item a {
+  color: var(--white-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: 0.2s ease;
+  padding: 2rem 2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-item a {
+    padding: 0.6rem 1em;
+  }
+}
+
+#hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  #hamburger {
+    display: block;
+  }
+}
+
+.hamburger-icon {
+  width: max-content;
+  font-size: 2rem;
+  color: var(--white);
+  position: relative;
+  z-index: 10;
+}
+
+.hamburger-menu {
+  width: 80%;
+  height: 100vh;
+  position: absolute;
+  right: -100%;
+  padding-top: 2rem;
+  background: var(--primary-color);
+  box-shadow: 0 20px 30px -1px #000000a3;
+  transition: 0.5s ease;
+}
+
+.hamburger-open .hamburger-menu {
+  right: 0;
+}
+/* !Navigation */
+
+/* Hero */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/hero-1.jpg");
+  background-size: cover !important;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  color: var(--white-color);
+  font-size: 4.5rem;
+  font-family: "Lobster", cursive;
+  margin-bottom: 0;
+}
+
+.hero-description {
+  font-size: 2.5rem;
+  color: var(--white-color);
+}
+
+.hero-btn {
+  font-size: 1.2rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  min-width: 200px;
+  margin: 0.3rem 0rem;
+}
+
+.hero-btn:first-child {
+  margin-right: 1rem;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  outline: none;
+}
+/* !Hero */
+
+/* Intro */
+#intro {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+}
+
+.intro-img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.intro-text {
+  padding: 1rem;
+}
+
+.intro-title {
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  font-family: "Lobster", cursive;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.intro-description {
+  color: var(--black-color);
+  font-size: 1.5rem;
+}
+
+.intro-btn {
+  font-size: 1.2rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  min-width: 200px;
+  margin: 0.3rem 0rem;
+  box-shadow: 0px 9px 19px rgb(199 185 23 / 50%);
+  transition: 0.2s ease;
+}
+
+.intro-btn:hover,
+.intro-btn:focus {
+  outline: none;
+  background: var(--white-color);
+  color: var(--black-color);
+  cursor: pointer;
+}
+/* !Intro */
+
+/* Delivery */
+#delivery {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/delivery-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.delivery-logo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 3rem;
+}
+
+.delivery-dialog {
+  color: var(--white-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.delivery-time {
+  color: var(--white-color);
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* !Delivery */
+
+/* Special Menu */
+#special-menu {
+  padding: 7rem 0px;
+}
+
+.special-menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+  justify-content: center;
+}
+
+.special-menu-title {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.special-menu-description {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.special-menu-item {
+  width: 160px;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 23px -10px rgb(0 0 0 / 20%);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.special-item-overly {
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.2s ease;
+}
+
+.special-menu-item:hover > .special-item-overly {
+  top: 0;
+}
+
+.special-menu-img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+.special-menu-item-name {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.special-menu-item-description {
+  text-align: center;
+  display: none;
+}
+/* !Special Menu */
+
+/* Copyright */
+#copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+#copyright p {
+  padding: 1.3rem 0px;
+  margin-bottom: 0;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* !Copyright */
