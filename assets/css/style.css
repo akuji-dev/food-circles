@@ -12,7 +12,7 @@
 
 /* Default CSS */
 :root {
-  --primary-color: #a9272e;
+  --primary-color: #a68b7c;
   --secondary-color: #2d2d2d;
   --white-color: #fff;
   --black-color: #000;
@@ -130,24 +130,26 @@ body {
   font-weight: bold;
 }
 
-.follow__us__title.secondary {
-  color: var(--white-color);
-}
-
 .follow__us__item {
   font-size: 3rem;
   color: var(--primary-color);
   transition: 0.3s ease;
 }
+
 .follow__us__item:hover {
   text-decoration: none;
   color: var(--secondary-color);
 }
 
-.follow__us__item.secondary {
+.follow__us.secondary .follow__us__title {
   color: var(--white-color);
 }
-.follow__us__item.secondary:hover {
+
+.follow__us.secondary .follow__us__item {
+  color: var(--white-color);
+}
+
+.follow__us.secondary .follow__us__item:hover {
   color: var(--secondary-color);
 }
 /* !Custom CSS Class */
@@ -269,18 +271,28 @@ body.hamburger-open {
 /* Breadcrumb */
 #breadcrumb {
   width: 100%;
-  height: 100vh;
-  background: url("../images/breadcrumb.png");
-  background-size: cover !important;
-  background-attachment: fixed;
+  padding: 5rem 0;
+  background: url(../images/breadcrumb_bg.png) no-repeat center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+#breadcrumb::after {
+  content: "";
+  width: 100%;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/zigzag.png) repeat-x;
 }
 
 .breadcrumb__title {
   color: var(--white-color);
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-family: "Title Font", cursive;
   margin-bottom: 0;
   text-align: center;
@@ -288,12 +300,12 @@ body.hamburger-open {
 
 @media only screen and (max-width: 992px) {
   .breadcrumb__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 .breadcrumb__description {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--white-color);
   text-align: center;
 }
@@ -312,7 +324,6 @@ body.hamburger-open {
   height: 100vh;
   background: url("../images/hero-1.jpg");
   background-size: cover !important;
-  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +438,6 @@ body.hamburger-open {
   background: url(../images/delivery-bg.jpg);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
 }
 
 .delivery__logo {
@@ -738,6 +748,11 @@ body.hamburger-open {
   position: relative;
   padding: 4rem 0 14rem 0;
   background-color: var(--gray-color);
+}
+
+#breadcrumb__box .breadcrumb__title {
+  font-size: 4.5rem;
+  text-align: center;
 }
 
 .breadcrumb__box {
