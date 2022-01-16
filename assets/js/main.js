@@ -19,7 +19,6 @@ window.onscroll = function (e) {
 // Hamburger Navigation
 var hamburgerIcon = document.getElementById("hamburger__icon");
 var body = document.getElementsByTagName("body")[0];
-
 function Hamburger() {
   if (body.classList.contains("hamburger__open")) {
     body.classList.remove("hamburger__open");
@@ -29,7 +28,6 @@ function Hamburger() {
     hamburgerIcon.innerHTML = "<i class='fal fa-times'></i>";
   }
 }
-
 hamburgerIcon.addEventListener("click", function () {
   Hamburger();
 });
@@ -92,7 +90,6 @@ var specialMenuItemsData = [{
   "name": "Kalo Vuna",
   "img": "./assets/images/menus/25.jpg"
 }];
-
 var specialMenuWrapper = document.querySelector(".special__menu__grid");
 specialMenuItemsData.forEach(specialMenuItemData => {
   var specialMenuItem = document.createElement("div");
@@ -102,3 +99,45 @@ specialMenuItemsData.forEach(specialMenuItemData => {
 
   specialMenuWrapper.append(specialMenuItem);
 });
+
+
+// Tenstimonal
+function Testimonial(dir){
+  var testimonialWrapper = document.querySelector(".rating__wrapper");
+  var testimonialItems = [].slice.call(testimonialWrapper.children);
+  var testimonialItemsCount = testimonialWrapper.childElementCount;
+  var testimonialActive = document.querySelector(".rating__wrapper .active");
+  var testimonialActiveIndex = Array.prototype.indexOf.call(testimonialWrapper.children, testimonialActive);
+  var testimonialItemNext = testimonialItems[(testimonialActiveIndex + 1)];
+  var testimonialItemPrev = testimonialItems[(testimonialActiveIndex - 1)];
+  var testimonialItemLast = testimonialItems[(testimonialItemsCount - 1)];
+  var testimonialFirstItem = testimonialItems[0];
+  var testimonialWidth = testimonialFirstItem.offsetWidth;
+  var testimonialNextLeft = testimonialWidth * (testimonialActiveIndex + 1);
+  var testimonialPrevLeft = testimonialWidth * (testimonialActiveIndex - 1);
+  var testimonialFullLeft = testimonialWidth * (testimonialItemsCount - 1);
+
+
+  if(dir == "next" && testimonialItemsCount > 1){
+    if((testimonialActiveIndex + 1 ) == testimonialItemsCount){
+      testimonialFirstItem.style.marginLeft = "0px";
+      testimonialActive.classList.remove("active");
+      testimonialFirstItem.classList.add("active");
+    }else{
+      testimonialFirstItem.style.marginLeft = "-"+testimonialNextLeft+"px";
+      testimonialActive.classList.remove("active");
+      testimonialItemNext.classList.add("active");
+    }
+  }else if(dir == "prev" && testimonialItemsCount > 1){
+    if((testimonialActiveIndex + 1) == 1){
+      testimonialFirstItem.style.marginLeft = "-"+testimonialFullLeft+"px";
+      testimonialActive.classList.remove("active");
+      testimonialItemLast.classList.add("active");
+    }else{
+      testimonialFirstItem.style.marginLeft = "-"+testimonialPrevLeft+"px";
+      testimonialActive.classList.remove("active");
+      testimonialItemPrev.classList.add("active");
+    }
+  }
+
+}

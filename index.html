@@ -60,7 +60,7 @@
             </li>
           </ul>
         </div>
-        <div id="hamburger" class="hamburger__wrapper w-100">
+        <div id="hamburger" class="hamburger__wrapper">
           <div id="hamburger__icon" class="hamburger__icon ml-auto">
             <i class="fas fa-bars"></i>
           </div>
@@ -168,84 +168,88 @@
           </h2>
           <div class="section__title__border m-auto"></div>
           <div class="rating__wrapper">
-            <div class="rating__item">
-              <div class="client__icon">
-                <img
-                  class="img-fluid"
-                  src="./assets/images/clients/client-1.jpg"
-                  alt="Client Picture"
-                />
-              </div>
-              <h2 class="client__name">Devid Jons.</h2>
-              <p class="client__feedback">
-                Great chili cheese dog! I will definitely be back!
-              </p>
-              <div class="client__rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </div>
-            <div class="rating__item">
-              <div class="client__icon">
-                <img
-                  class="img-fluid"
-                  src="./assets/images/clients/client-1.jpg"
-                  alt="Client Picture"
-                />
-              </div>
-              <h2 class="client__name">Devid Jons.</h2>
-              <p class="client__feedback">
-                Great chili cheese dog! I will definitely be back!
-              </p>
-              <div class="client__rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </div>
-            <div class="rating__item">
-              <div class="client__icon">
-                <img
-                  class="img-fluid"
-                  src="./assets/images/clients/client-1.jpg"
-                  alt="Client Picture"
-                />
-              </div>
-              <h2 class="client__name">Devid Jons.</h2>
-              <p class="client__feedback">
-                Great chili cheese dog! I will definitely be back!
-              </p>
-              <div class="client__rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="rating__item__wrapper active">
+              <div class="rating__item">
+                <div class="client__icon">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/clients/client-1.jpg"
+                    alt="Client Picture"
+                  />
+                </div>
+                <div class="rating__item__content">
+                  <p class="client__feedback">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </p>
+                  <h2 class="client__name">Devid Jons.</h2>
+                  <div class="client__rating__wrapper">
+                    <span
+                      class="rating__slide_icon"
+                      onclick="Testimonial('prev')"
+                    >
+                      <i class="fal fa-long-arrow-left"></i>
+                    </span>
+                    <div class="client__rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <span
+                      class="rating__slide_icon"
+                      onclick="Testimonial('next')"
+                    >
+                      <i class="fal fa-long-arrow-right"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="rating__item">
-              <div class="client__icon">
-                <img
-                  class="img-fluid"
-                  src="./assets/images/clients/client-1.jpg"
-                  alt="Client Picture"
-                />
-              </div>
-              <h2 class="client__name">Devid Jons.</h2>
-              <p class="client__feedback">
-                Great chili cheese dog! I will definitely be back!
-              </p>
-              <div class="client__rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="rating__item__wrapper">
+              <div class="rating__item">
+                <div class="client__icon">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/clients/client-2.jpg"
+                    alt="Client Picture"
+                  />
+                </div>
+                <div class="rating__item__content">
+                  <p class="client__feedback">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </p>
+                  <h2 class="client__name">Leo Sigh.</h2>
+                  <div class="client__rating__wrapper">
+                    <span
+                      class="rating__slide_icon"
+                      onclick="Testimonial('prev')"
+                    >
+                      <i class="fal fa-long-arrow-left"></i>
+                    </span>
+                    <div class="client__rating">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                    <span
+                      class="rating__slide_icon"
+                      onclick="Testimonial('next')"
+                    >
+                      <i class="fal fa-long-arrow-right"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -325,16 +329,13 @@
     </main>
     <!-- !Main -->
 
-    <!-- Footer -->
+    <!-- Copyright -->
     <footer id="copyright">
       <div class="container">
         <p>Copyright © 2022. All Rights Reserved By Duggie Dogs</p>
       </div>
     </footer>
-    <!-- !Footer -->
-
-    <!-- Core Library -->
-    <script src="./assets/library/bootstrap/js/jquery.min.js"></script>
+    <!-- !Copyright -->
 
     <!-- Bootstrap JS -->
     <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
