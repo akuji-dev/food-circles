@@ -6,13 +6,13 @@
 // Navigation
 window.onscroll = function (e) {
 	// Select Sticky Header
-    var element = document.querySelector("#navigation");
+    var navigation = document.querySelector("#navigation");
 	
 	// If Scroll then show sticky header
 	if(window.scrollY >= 200){
-		element.classList.add("sticky");
+		navigation.classList.add("sticky");
 	}else{
-		element.classList.remove("sticky");
+		navigation.classList.remove("sticky");
 	}
 }
 
